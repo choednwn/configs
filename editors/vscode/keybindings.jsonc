@@ -1,0 +1,153 @@
+[
+  {
+    "key": "ctrl+c",
+    "command": "extension.vim_cmd+c",
+    "when": "editorTextFocus && vim.active && vim.overrideCopy && vim.use<D-c> && !inDebugRepl"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-extension.vim_cmd+c",
+    "when": "editorTextFocus && vim.active && vim.overrideCopy && vim.use<D-c> && !inDebugRepl"
+  },
+  {
+    "command": "runCommands",
+    "key": "ctrl+c",
+    "args": {
+      "commands": ["hideSuggestWidget", "extension.vim_escape"]
+    },
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "cmd+;",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "cmd+;",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "-workbench.action.splitEditorUp"
+  },
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "-workbench.action.splitEditorRight"
+  },
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "-workbench.action.splitEditorOrthogonal"
+  },
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "-workbench.action.splitEditorLeft"
+  },
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "-workbench.action.splitEditorDown"
+  },
+  {
+    "key": "cmd+k shift+right",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "cmd+k shift+down",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "cmd+k shift+left",
+    "command": "workbench.action.splitEditorLeft"
+  },
+  {
+    "key": "cmd+k shift+up",
+    "command": "workbench.action.splitEditorUp"
+  },
+  {
+    "key": "cmd+k k",
+    "command": "workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "cmd+k j",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "cmd+k h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "cmd+k l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "cmd+k right",
+    "command": "-workbench.action.moveActiveEditorGroupRight"
+  },
+  {
+    "key": "cmd+k right",
+    "command": "workbench.action.moveEditorToRightGroup"
+  },
+  {
+    "key": "cmd+k left",
+    "command": "-workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "cmd+k up",
+    "command": "-workbench.action.moveActiveEditorGroupUp"
+  },
+  {
+    "key": "cmd+k down",
+    "command": "-workbench.action.moveActiveEditorGroupDown"
+  },
+  {
+    "key": "cmd+k left",
+    "command": "workbench.action.moveEditorToLeftGroup"
+  },
+  {
+    "key": "cmd+k up",
+    "command": "workbench.action.moveEditorToAboveGroup"
+  },
+  {
+    "key": "cmd+k down",
+    "command": "workbench.action.moveEditorToBelowGroup"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-showNextParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "key": "cmd+k ]",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "cmd+k [",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+alt+space",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+enter",
+    "command": "-python.execInREPL",
+    "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !accessibilityModeEnabled && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+  },
+  {
+    "key": "shift+enter",
+    "command": "-python.execSelectionInTerminal",
+    "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+  },
+  {
+    "key": "shift+alt+cmd+n",
+    "command": "-polyglot-notebook.newNotebook"
+  },
+  {
+    "key": "alt+cmd+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "shift+alt+cmd+n",
+    "command": "explorer.newFolder"
+  }
+]
