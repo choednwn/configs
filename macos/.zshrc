@@ -66,4 +66,3 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
 # style
 zstyle ':completion:*' list-colors
 # --------
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
