@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Gruvbox",
+    "background": "#000000",
+    "foreground": "#FFFFFF",
+    "selectionBackground": "#FFFFFF",
+    "black": "#282828",
+    "blue": "#458588",
+    "brightBlack": "#928374",
+    "brightBlue": "#83A598",
+    "brightCyan": "#8EC07C",
+    "brightGreen": "#B8BB26",
+    "brightPurple": "#D3869B",
+    "brightRed": "#FB4934",
+    "brightWhite": "#F2F2F2",
+    "brightYellow": "#FABD2F",
+    "cursorColor": "#FFFFFF",
+    "cyan": "#689D6A",
+    "green": "#98971A",
+    "purple": "#B16286",
+    "red": "#CC241D",
+    "white": "#CCCCCC",
+    "yellow": "#D79921"
+  }
+]
