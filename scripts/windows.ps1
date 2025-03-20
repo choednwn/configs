@@ -3,7 +3,7 @@ $execpath = Get-Location
 function Entry {
     Write-Host "`nJustin's Configuration Tool (JCT)" -ForegroundColor DarkMagenta
     Write-Host "Platform: Windows" -ForegroundColor DarkGray
-    Write-Host "Version 0.0.1a (2025.03.20)`n" -ForegroundColor DarkGray
+    Write-Host "Version 0.0.1a (2025.03.20)`n" -ForegroundColor DarkGray 
 
     $opts = "Editors", "Lang", "OS", "Terminal"
     switch (Selector "Options" $opts) {
@@ -52,7 +52,7 @@ function Select-Editor {
             Write-Host "Successfully set JetBrains configurations" -ForegroundColor Cyan
         }
         1 { # Neovim
-            Write-Host "`nWork-In-Progress"
+            Write-Host "Work-In-Progress"
         }
         2 { # VsCode
             $dest = "$env:APPDATA\Code\User"
@@ -78,11 +78,11 @@ function Select-Lang {
 }
 
 function Select-OS {
-    Write-Host "`nWork-In-Progress"
+    Write-Host "Work-In-Progress"
 }
 
 function Select-Terminal {
-    Write-Host "`nWork-In-Progress"
+    Write-Host "Work-In-Progress"
 }
 
 Entry
