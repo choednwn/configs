@@ -13,7 +13,8 @@
 
 ### Windows
 ```
-$ .\configs\scripts\windows.ps1
+$ cd configs
+$ .\scripts\windows.ps1
 ```
 
 ### MacOS

@@ -1,6 +1,16 @@
 $execpath = Get-Location
 
-function Entry {
+function JCT-Execute {
+    # Start of script
+    if ("$execpath".EndsWith("\configs")) {
+        JCT-Entry
+    }
+    else {
+        Write-Host "Script must be run from the `"configs`" folder"
+    }
+}
+
+function JCT-Entry {
     Write-Host "`nJustin's Configuration Tool (JCT)" -ForegroundColor DarkMagenta
     Write-Host "Platform: Windows" -ForegroundColor DarkGray
     Write-Host "Version 0.0.1a (2025.03.20)`n" -ForegroundColor DarkGray 
@@ -85,4 +95,6 @@ function Select-Terminal {
     Write-Host "Work-In-Progress"
 }
 
-Entry
+# Run Script
+JCT-Execute
+
