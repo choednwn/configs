@@ -1,4 +1,6 @@
 $execpath = Get-Location
+$version = "0.0.2a"
+$date = "2025.03.20"
 
 function JCT-Execute {
     # Start of script
@@ -13,7 +15,7 @@ function JCT-Execute {
 function JCT-Entry {
     Write-Host "`nJustin's Configuration Tool (JCT)" -ForegroundColor DarkMagenta
     Write-Host "Platform: Windows" -ForegroundColor DarkGray
-    Write-Host "Version 0.0.1a (2025.03.20)`n" -ForegroundColor DarkGray 
+    Write-Host "Version $version ($date)`n" -ForegroundColor DarkGray 
 
     $opts = "Editors", "Lang", "OS", "Terminal"
     switch (Selector "Options" $opts) {
