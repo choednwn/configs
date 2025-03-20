@@ -199,6 +199,14 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
+  // ===========> PS1 <===========
+  "[powershell]": {
+    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    "editor.semanticHighlighting.enabled": false,
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+    "editor.formatOnSave": false
+  },
+
   /**
    *
    * EXTENSION SETTINGS
