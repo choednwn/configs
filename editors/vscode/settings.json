@@ -119,6 +119,15 @@
   "git.blame.editorDecoration.enabled": true,
 
   /**
+   * =========================
+   *           COPILOT
+   * =========================
+   */
+
+  // Copilot > Chat
+  "chat.commandCenter.enabled": false,
+
+  /**
    * =============================
    *          EXTENSIONS
    * =============================
@@ -155,14 +164,21 @@
    */
 
   // C & Cpp & Make > C & C++
+  "C_Cpp.intelliSenseEngine": "disabled",
   "C_Cpp.default.compilerPath": "C:/Program Files/LLVM/bin/clang.exe",
   "C_Cpp.formatting": "clangFormat",
   "C_Cpp.doxygen.generatedStyle": "/**",
   "C_Cpp.codeAnalysis.clangTidy.enabled": true,
   "C_Cpp.codeAnalysis.updateDelay": 1000,
 
+  // C & Cpp & Make > Clangd
+  "clangd.arguments": ["--fallback-style=llvm"],
+
   // C & Cpp & Make > Make
   "makefile.configureOnOpen": true,
+
+  // C & Cpp & Make > CMake
+  "cmake.revealLog": "never",
 
   /**
    * ===================================
@@ -185,6 +201,17 @@
    */
 
   /**
+   * =======================
+   *          REMOTE
+   * =======================
+   */
+
+  // Remote > SSH
+  "remote.SSH.remotePlatform": {
+    "vmware-ubuntu": "linux"
+  },
+
+  /**
    * =============================
    *          VIM (NEOVIM)
    * =============================
@@ -193,7 +220,7 @@
   // Neovim > Paths
   "vscode-neovim.neovimExecutablePaths.win32": "C:\\tools\\neovim\\nvim-win64\\bin\\nvim.exe",
   "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\choednwn\\AppData\\Local\\nvim\\init.lua",
-  
+
   // Neovim > Keys
   "vscode-neovim.ctrlKeysForInsertMode": [
     "a",
@@ -214,7 +241,7 @@
     "c",
     "d",
     "e",
-    "f",
+    // "f", (disabled)
     "h",
     "i",
     // "j", (disabled)
@@ -245,7 +272,7 @@
    *          BETTER COMMENTS
    * =================================
    */
-   
+
   // Better Comments > Tags
   "better-comments.tags": [
     {
