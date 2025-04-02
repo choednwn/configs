@@ -1,0 +1,3 @@
+[submodule "editors/vscode/themes/anya-vsc"]
+	path = editors/vscode/themes/anya-vsc
+	url = https://github.com/choednwn/anya-vsc.git
