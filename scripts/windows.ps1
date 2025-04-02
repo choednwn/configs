@@ -1,6 +1,10 @@
 $execpath = Get-Location
-$version = "0.0.2a"
-$date = "2025.03.20"
+$version = "0.0.3a"
+$date = "2025.03.31"
+
+#=======================#
+#       JCT ENTRY       #
+#=======================#
 
 function JCT-Execute {
     # Start of script
@@ -26,6 +30,10 @@ function JCT-Entry {
     }
 }
 
+#================================#
+#       Utility Functions        #
+#================================#
+
 function Set-Files([string]$dest, [string]$origin, [string[]]$files) {
     foreach ($file in $files) {
         if ([System.IO.File]::Exists("$dest\$file.old")) {
@@ -41,17 +49,28 @@ function Set-Files([string]$dest, [string]$origin, [string[]]$files) {
 
 function Selector([string]$msg, [string[]]$opts) {
     Write-Host -ForegroundColor Cyan "$msg".ToUpper()
-    for ($idx = 0; $idx -lt $opts.Length; $idx++) {
+
+    $idx = 0;    
+    while ($idx -lt $opts.Length) {
         $opt = $opts[$idx]
         Write-Host "$idx) $opt"
+        $idx++
     }
+    Write-Host "$idx) Exit"
 
     $select = $(Write-Host "`nSelect: " -ForegroundColor Cyan -NoNewLine; Read-Host)
     if ($select -match "^\d+$") {
         Write-Host "`n"
+        if ([int]$select -eq $idx) {
+            exit
+        }
         return [int]$select
     }
 }
+
+#===============================#
+#       Editor Functions        #
+#===============================#
 
 function Select-Editor {
     $opts = "JetBrains", "Neovim", "VsCode"
@@ -76,9 +95,13 @@ function Select-Editor {
     }
 }
 
+#===============================#
+#       Language Functions      #
+#===============================#
+
 function Select-Lang {
     $opts = "Clang"
-    switch (Selector "LANGUAGE OPTIONS" $opts) {
+    switch (Selector "Language Options" $opts) {
         0 {
             $dest = $env:USERPROFILE
             $origin = "lang\clang"
@@ -89,9 +112,30 @@ function Select-Lang {
     }
 }
 
+#===========================#
+#       OS Functions        #
+#===========================#
+
 function Select-OS {
-    Write-Host "Work-In-Progress"
+    $opts = "Chocolately"
+    switch (Selector "OS Options" $opts) {
+        0 {
+            OS-Chocolately
+        }
+    }
 }
+
+function OS-Chocolately {
+    $opts = "Install Chocolately", "Install Packages"
+    switch (Selector "Chocolately Options" $opts) {
+        0 { }
+        1 { }
+    }
+}
+
+#===============================#
+#       Terminal Functions      #
+#===============================#
 
 function Select-Terminal {
     Write-Host "Work-In-Progress"

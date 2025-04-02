@@ -1,51 +1,56 @@
+/**
+ * Last Updated: 2025.04.02
+ */
 {
   /**
-   * EDITOR SETTINGS
+   * =====================================
+   *          SECURITY & TELEMETRY
+   * =====================================
    */
-  "editor.formatOnSave": true,
+  "security.workspace.trust.enabled": false,
+  "telemetry.telemetryLevel": "off",
+
+  /**
+   * =========================
+   *          EDITOR
+   * =========================
+   */
+
+  // Editor > Font
   "editor.fontSize": 13,
-  "editor.fontFamily": "'Monaspace Krypton', 'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'Monaspace Argon', Consolas, 'Courier New', monospace",
+
+  // Editor > Format
+  "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.minimap.enabled": false,
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorBlinking": "smooth",
-  "editor.smoothScrolling": true,
-  "editor.stickyScroll.enabled": true,
-  "editor.wordWrap": "off",
   "editor.insertSpaces": true,
   "editor.detectIndentation": true,
-  "editor.quickSuggestions": {
-    "strings": "on"
-  },
-  "editor.unicodeHighlight.allowedCharacters": {
-    "–": true
-  },
-  "editor.defaultColorDecorators": "auto",
+
+  // Editor > Text
   "editor.bracketPairColorization.enabled": true,
   "editor.semanticHighlighting.enabled": true,
-  "editor.lineHeight": 1.64,
+  "editor.renderWhitespace": "trailing",
+
+  // Editor > Scroll & Cursor
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // Editor > Other
+  "editor.inlayHints.enabled": "onUnlessPressed",
   "editor.guides.indentation": true,
-  "editor.inlayHints.enabled": "offUnlessPressed",
-  "editor.codeActionsOnSave": {
-    "source.sortImports": "always"
-    // "source.fixAll.eslint": "always"
-  },
+  "editor.minimap.autohide": true,
+  "editor.lineNumbers": "relative",
 
   /**
-   * EXPLORER ESTTINGS
+   * =============================
+   *          WORKBENCH
+   * =============================
    */
-  "explorer.compactFolders": false,
-  "explorer.confirmDragAndDrop": false,
 
-  /**
-   * WORKBENCH SETTINGS
-   */
-  "workbench.iconTheme": "bearded-icons",
+  // Workbench > Colors
   "workbench.colorTheme": "Anya",
-  "workbench.editor.pinnedTabsOnSeparateRow": true,
-  "workbench.tree.enableStickyScroll": true,
-  "workbench.tree.indent": 20,
-  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "bearded-icons",
   "workbench.colorCustomizations": {
     "editorBracketHighlight.foreground1": "#da7171",
     "editorBracketHighlight.foreground2": "#c893fd",
@@ -54,188 +59,194 @@
     "editorBracketHighlight.foreground5": "#c893fd",
     "editorBracketHighlight.foreground6": "#67cfb3"
   },
-  "workbench.editorAssociations": {
-    "*.copilotmd": "vscode.markdown.preview.editor",
-    "{git,gitlens}:/**/*.{md,csv,svg}": "default"
-  },
+
+  // Workbench > Other
+  "workbench.activityBar.location": "top",
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "workbench.tree.indent": 20,
 
   /**
-   * TERMINAL SETTINGS
+   * =========================
+   *          TERMINAL
+   * =========================
    */
+
+  // Terminal > Font
   "terminal.integrated.fontSize": 13,
-  "terminal.integrated.fontFamily": "'Monaspace Krypton'",
+  "terminal.integrated.fontFamily": "'Monospace Argon'",
+
+  // Terminal > Scroll & Cursor
   "terminal.integrated.smoothScrolling": true,
+
+  // Terminal > Copy
   "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.fontLigatures": true,
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  // Terminal > Profiles
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
   "terminal.integrated.profiles.windows": {
-    "PowerShell": {
+    "Windows PowerShell": {
       "source": "PowerShell",
       "icon": "terminal-powershell",
       "args": ["-NoLogo"]
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "source": "Git Bash"
     }
   },
 
   /**
-   * GIT SETTINGS
+   * =========================
+   *          FILES
+   * =========================
    */
-  "git.mergeEditor": true,
-  "git.autofetch": true,
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "git.openRepositoryInParentFolders": "never",
-  "git.blame.editorDecoration.enabled": true,
-  "git.blame.statusBarItem.enabled": true,
-  "git.blame.editorDecoration.template": "${authorName} (${authorDateAgo})",
-  "git.ignoreRebaseWarning": true,
 
-  /**
-   * COPILOT SETTINGS
-   */
-  "chat.commandCenter.enabled": false,
-
-  /**
-   * EXTENSIONS SETTINGS
-   */
-  "extensions.ignoreRecommendations": true,
-
-  /**
-   * FILES SETTINGS
-   */
+  // Files > Save
   "files.autoSave": "afterDelay",
+
+  // Files > Exclude
   "files.exclude": {
     "**/._*": true,
-    "**/.git": false
-  },
-  "files.associations": {
-    "*.svx": "markdown"
+    "**.git": false
   },
 
   /**
-   *
-   * LANGUAGE SPECIFIC SETTINGS
-   *
+   * =========================
+   *           GIT
+   * =========================
    */
-  // ===========> C, CPP <===========
-  "[c][cpp]": {
-    // {Commented out as I am using the clangd extension}
-    // "editor.defaultFormatter": "ms-vscode.cpptools"
+
+  // Git > Merge
+  "git.mergeEditor": true,
+
+  // Git > Blame
+  "git.blame.editorDecoration.enabled": true,
+
+  /**
+   * =============================
+   *          EXTENSIONS
+   * =============================
+   */
+
+  // Extensions > Other
+  "extensions.ignoreRecommendations": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
   },
-  "C_Cpp.intelliSenseEngine": "disabled",
-  "C_Cpp.inlayHints.parameterNames.enabled": true,
-  "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
-  "clangd.arguments": ["--fallback-style=llvm"],
-  "clangd.path": "C:\\Program Files\\LLVM\\bin\\clangd.exe",
-  "cmake.configureOnOpen": true,
-  "cmake.pinnedCommands": [
-    "workbench.action.tasks.configureTaskRunner",
-    "workbench.action.tasks.runTask"
-  ],
-  "cmake.showConfigureWithDebuggerNotification": false,
-  "cmake.showOptionsMovedNotification": false,
-  "cmake.revealLog": "never",
 
-  // ===========> CSHARP <===========
-  "dotnet.codeLens.enableReferencesCodeLens": false,
+  /**
+   * =========================================
+   *          LANGUAGE > HTML, CSS, JS
+   * =========================================
+   */
 
-  // ===========> PYTHON <===========
+  // HTML & CSS & JavaScript > Global
+  "[html][css][javascript][javascriptreact][typescript][typescriptreact][json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+
+  // HTML & CSS & JavaScript > JavaScript & TypeScript
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  /**
+   * ===========================================
+   *          LANGUAGE > C & C++ & MAKE
+   * ===========================================
+   */
+
+  // C & Cpp & Make > C & C++
+  "C_Cpp.default.compilerPath": "C:/Program Files/LLVM/bin/clang.exe",
+  "C_Cpp.formatting": "clangFormat",
+  "C_Cpp.doxygen.generatedStyle": "/**",
+  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+  "C_Cpp.codeAnalysis.updateDelay": 1000,
+
+  // C & Cpp & Make > Make
+  "makefile.configureOnOpen": true,
+
+  /**
+   * ===================================
+   *          LANGUAGE > PYTHON
+   * ===================================
+   */
+
+  // Python
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     }
   },
-  "python.REPL.enableREPLSmartSend": false,
-  "isort.args": ["--profile", "black"],
-
-  // ===========> JAVA <===========
-  "redhat.telemetry.enabled": false,
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-23",
-      "path": "C:\\Program Files\\Java\\jdk-23",
-      "default": true
-    }
-  ],
-  "java.jdt.ls.vmargs": "-Xmx1G",
-
-  // html
-  "[html][css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
-  },
-  "tailwindCSS.classAttributes": ["class", "className", "styles", "style"],
-
-  // ===========> JAVASCRIPT, TYPESCRIPT <===========
-  "[javascript][javascriptreact][typescript][typescriptreact][mdx]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2
-  },
-  "js/ts.implicitProjectConfig.experimentalDecorators": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "svelte.enable-ts-plugin": true,
-
-  // ===========> ZIG <===========
-  "zig.initialSetupDone": true,
-
-  // ===========> JSON <===========
-  "[json][jsonc]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  // ===========> PS1 <===========
-  "[powershell]": {
-    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
-    "editor.semanticHighlighting.enabled": false,
-    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
-    "editor.formatOnSave": false
-  },
 
   /**
-   *
-   * EXTENSION SETTINGS
-   *
+   * =======================================
+   *          LANGUAGE > RUST & ZIG
+   * =======================================
    */
 
   /**
-   * ===========> COPILOT <===========
+   * =============================
+   *          VIM (NEOVIM)
+   * =============================
    */
-  "github.copilot.editor.enableAutoCompletions": false,
 
-  // ===========> VS-VIM <===========
-  "vim.smartRelativeLine": true,
-  "vim.easymotion": true,
-  "vim.foldfix": true,
-  "vim.enableNeovim": true,
-  "vim.useSystemClipboard": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [":", "w", "<enter>"],
-      "commands": ["workbench.action.files.save"]
-    },
-    {
-      "before": [":", "W", "<enter>"],
-      "commands": ["workbench.action.files.save"]
-    }
+  // Neovim > Paths
+  "vscode-neovim.neovimExecutablePaths.win32": "C:\\tools\\neovim\\nvim-win64\\bin\\nvim.exe",
+  "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\choednwn\\AppData\\Local\\nvim\\init.lua",
+  
+  // Neovim > Keys
+  "vscode-neovim.ctrlKeysForInsertMode": [
+    "a",
+    "c",
+    "d",
+    "h",
+    // "j", (disabled)
+    "m",
+    "o",
+    "r",
+    "t",
+    "u",
+    "w"
+  ],
+  "vscode-neovim.ctrlKeysForNormalMode": [
+    "a",
+    // "b", (disabled)
+    "c",
+    "d",
+    "e",
+    "f",
+    "h",
+    "i",
+    // "j", (disabled)
+    // "k",
+    "l",
+    "m",
+    "o",
+    "r",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "/",
+    "]",
+    "right",
+    "left",
+    "up",
+    "down",
+    "backspace",
+    "delete"
   ],
 
-  // ===========> BETTER COMMENTS <===========
+  /**
+   * =================================
+   *          BETTER COMMENTS
+   * =================================
+   */
+   
+  // Better Comments > Tags
   "better-comments.tags": [
     {
       "tag": "!",
@@ -246,14 +257,5 @@
       "bold": false,
       "italic": false
     }
-  ],
-
-  // ===========> PRESENTATION MODE <===========
-  "presentation-mode.active": {
-    // "editor.fontSize": 20
-    "window.zoomLevel": 2
-  },
-
-  // ===========> LIVE PREVIEW <===========
-  "livePreview.customExternalBrowser": "Firefox"
+  ]
 }
